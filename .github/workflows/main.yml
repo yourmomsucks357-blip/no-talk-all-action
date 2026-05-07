@@ -1,7 +1,9 @@
-name: Run
+name: Tool Scan
 on: [workflow_dispatch]
 jobs:
-  execute:
+  scan:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Action Active'
+      - uses: actions/checkout@v2
+      - run: pip install requests
+      - run: python web_scanner.py vaughnsundeen.com
