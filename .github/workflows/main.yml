@@ -1,0 +1,7 @@
+name: Run
+on: [workflow_dispatch]
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Action Active'
